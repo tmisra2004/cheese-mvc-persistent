@@ -6,9 +6,10 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
 public class Category {
 
-    @Entity
+
     @Id
     @GeneratedValue
     private int id;
@@ -18,12 +19,9 @@ public class Category {
     private String name;
 
     public Category() {
-
     }
 
     public Category(String name) {
         this.name = name;
     }
-
-
 }
