@@ -12,11 +12,11 @@ public class Category {
 
     @Id
     @GeneratedValue
-    public int id;
+    private int id;
 
     @NotNull
     @Size(min=3, max=15)
-    public String name;
+    private String name;
 
     public Category() {
     }
@@ -40,6 +40,10 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Cheese> getCheeses() {
+        return cheeses;
     }
 }
 
